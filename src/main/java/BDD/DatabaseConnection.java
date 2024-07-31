@@ -11,7 +11,7 @@ public class DatabaseConnection {
     private static final String bddApp = "user_management";
     private static final String pwd = "";
 
-    public static Connection getConnection() throws ClassNotFoundException, SQLException {
+    public static Connection getConnexion() throws ClassNotFoundException, SQLException {
 
         Class.forName("com.mysql.cj.jdbc.Driver");
         return DriverManager.getConnection(url+bddApp, user, pwd);

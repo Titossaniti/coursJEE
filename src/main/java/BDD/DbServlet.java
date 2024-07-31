@@ -14,7 +14,7 @@ public class DbServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String message = "Base de donnée connectée !";
         try {
-            DatabaseConnection.getConnection();
+            DatabaseConnection.getConnexion();
             request.setAttribute("message", message);
             request.getRequestDispatcher("/WEB-INF/views/bddConn.jsp").forward(request, response);
         } catch (ServletException | SQLException | ClassNotFoundException e) {
@@ -22,4 +22,3 @@ public class DbServlet extends HttpServlet {
         }
     }
 }
-
