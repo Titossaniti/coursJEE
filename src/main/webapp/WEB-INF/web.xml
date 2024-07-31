@@ -43,4 +43,13 @@
     <url-pattern>/AfficherListPersonnes</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>DbServlet</servlet-name>
+    <servlet-class>BDD.DbServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DbServlet</servlet-name>
+    <url-pattern>/bddConn</url-pattern>
+  </servlet-mapping>
+
 </web-app>
