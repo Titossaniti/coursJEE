@@ -17,4 +17,7 @@ public class Exemple extends HttpServlet {
         request.setAttribute("tartanpion2", message2);
         request.getRequestDispatcher("/WEB-INF/views/exemple.jsp").forward(request, response); // Rediriger vers le template JSP
     }
+
+
+
 }

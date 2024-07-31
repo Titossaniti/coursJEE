@@ -1,14 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrateur
-  Date: 30/07/2024
-  Time: 11:35
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
-
+<head>
+    <title>Ma Page JSP</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/nav.css">
+</head>
 <body>
-    <p>Voici le menu</p>
+<nav>Voici le menu</nav>
 </body>
 </html>

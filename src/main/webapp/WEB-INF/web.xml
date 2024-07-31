@@ -33,4 +33,14 @@
     <servlet-name>Exemple</servlet-name>
     <url-pattern>/Exemple</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AfficherPersonnes</servlet-name>
+    <servlet-class>Servlet.AfficherPersonnes</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AfficherPersonnes</servlet-name>
+    <url-pattern>/AfficherListPersonnes</url-pattern>
+  </servlet-mapping>
+
 </web-app>

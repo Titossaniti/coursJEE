@@ -1,4 +1,4 @@
-package Servlet;
+package Entity;
 
 public class Personnes {
     private String name;
