@@ -6,8 +6,16 @@
     <title>Liste des voitures de la BDD</title>
 </head>
 <body>
-<h1>Liste des Voitures</h1>
-<table>
+<h2>Ajouter une Voiture</h2>
+<form action="AddCar" method="post">
+    <label for="marque">Marque:</label>
+    <input type="text" id="marque" name="marque" required><br><br>
+    <label for="model">Modèle:</label>
+    <input type="text" id="model" name="model" required><br><br>
+    <input type="submit" value="Ajouter">
+</form>
+<h2>Liste des Voitures</h2>
+<table border="1">
     <tr>
         <th>Marque</th>
         <th>Modèle</th>

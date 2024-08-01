@@ -11,5 +11,6 @@
         <button type="submit">Envoyer</button>
     </form>
     <a href="${pageContext.request.contextPath}/bddConn">Se connecter à la BDD</a>
+    <a href="${pageContext.request.contextPath}/listeVoitures">Se connecter avec hibernate</a>
 </body>
 </html>

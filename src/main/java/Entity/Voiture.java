@@ -1,17 +1,15 @@
 package Entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="voiture")
 public class Voiture {
-    private int id;
+    @Id // primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // auto incrémentation
+    private Long id;
     private String marque;
     private String model;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getMarque() {
         return marque;
@@ -27,5 +25,13 @@ public class Voiture {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
     }
 }

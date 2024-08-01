@@ -1,11 +1,7 @@
 package BDD;
 
 import Entity.Voiture;
-
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
@@ -17,25 +13,16 @@ import javax.servlet.RequestDispatcher;
 
 @WebServlet("/SelectUser")
 public class SelectUsers extends HttpServlet {
+    private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ArrayList<Voiture> voitures = new ArrayList<>();
-        try (Connection connection = DatabaseConnection.getConnexion()) {
-            String query = "SELECT * FROM voiture";
-            PreparedStatement statement = connection.prepareStatement(query);
-            ResultSet resultSet = statement.executeQuery();
-
-            while (resultSet.next()) {
-                Voiture voiture = new Voiture();
-                voiture.setMarque(resultSet.getString("marque"));
-                voiture.setModel(resultSet.getString("model"));
-                voitures.add(voiture);
-            }
+        try {
+            ArrayList<Voiture> voitures = SelectRequest.getVoitures();
+            request.setAttribute("voitures", voitures);
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
 
-        request.setAttribute("voitures", voitures);
         RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/views/bddConn.jsp");
         dispatcher.forward(request, response);
     }

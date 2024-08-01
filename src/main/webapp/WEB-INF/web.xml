@@ -60,4 +60,27 @@
     <servlet-name>SelectUsers</servlet-name>
     <url-pattern>/bddConn</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AddCar</servlet-name>
+    <servlet-class>BDD.AddCar</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddCar</servlet-name>
+    <url-pattern>/AddCar</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>VoitureServlet</servlet-name>
+    <servlet-class>Servlet.VoitureServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VoitureServlet</servlet-name>
+    <url-pattern>/listeVoitures</url-pattern>
+  </servlet-mapping>
+
+
+  <listener>
+    <listener-class>listener.HibernateContextListener</listener-class>
+  </listener>
 </web-app>
