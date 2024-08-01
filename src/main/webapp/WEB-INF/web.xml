@@ -49,7 +49,15 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>DbServlet</servlet-name>
-    <url-pattern>/bddConn</url-pattern>
+    <url-pattern>/TestconnDBB</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>SelectUsers</servlet-name>
+    <servlet-class>BDD.SelectUsers</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SelectUsers</servlet-name>
+    <url-pattern>/bddConn</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -10,6 +10,6 @@
         <input type="text" id="transmittedValue" name="transmittedValue">
         <button type="submit">Envoyer</button>
     </form>
-    <a href="${pageContext.request.contextPath}/dbServlet">Se connecter à la BDD</a>
+    <a href="${pageContext.request.contextPath}/bddConn">Se connecter à la BDD</a>
 </body>
 </html>
